@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(to left, rgb(140, 212, 240), rgb(58, 98, 228));
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .button-container {
+    display: flex;
+    background-color: rgb(12, 46, 74);
+    padding: 3px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
+  }
+  
+  .button, .buttonp {
+    outline: 0;
+    border: 0 ;
+    
+  }
+  
+  .button {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  .buttonp {
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    color: rgb(7, 38, 105);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+
+  .cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    border-radius: 1.4em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #2dcde2, #f0eb7f);
+    color: ghostwhite;
+    overflow: hidden;
+  }
+  
+  .cssbuttons-io:hover {
+    color: black;
+  }
+  
+  .cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+  }
+  
+  .cssbuttons-io::before,
+  .cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .cssbuttons-io::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  .msg-count {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: relative;
+    top: -9px;
+    vertical-align: top;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .htext {
+      visibility: hidden;
+      position: absolute;
+    }
+  
+    .button:hover {
+      background-color: rgb(255, 255, 255);
+      color: black;
+    }
+  }
