@@ -45,33 +45,33 @@ function closebox(){
     success_box.style.position="absolute";
 }
 </script>
-<?php
+<!-- <?php
 
-if(isset($_POST['submit']))
-{
-    $email=$_POST['email'];
-    $query="SELECT * FROM users WHERE email='$email'";
-    $result=mysqli_query($conn,$query);
-    $row=mysqli_fetch_assoc($result);
-    $count=mysqli_num_rows($result);
-    if($count==0)
-    {
-        echo "<script> error_msg.innerHTML='Email not found'; error_box.style.visibility='visible'; error_box.style.position='relative';</script>";
-    }
-    else
-    {
-        $to=$email;
-        $subject="OTP";
-        $otp=rand(100000,999999);
-        $_SESSION['otp']=$otp;
-        $message="Your OTP is ".$otp;
-        $headers="From: debrisexplore@gmail.com";
-        mail($to,$subject,$message,$headers);
-      //  echo "<script> window.location.href='otp.php';</script>";
-    }
-}
+// if(isset($_POST['submit']))
+// {
+//     $email=$_POST['email'];
+//     $query="SELECT * FROM users WHERE email='$email'";
+//     $result=mysqli_query($conn,$query);
+//     $row=mysqli_fetch_assoc($result);
+//     $count=mysqli_num_rows($result);
+//     if($count==0)
+//     {
+//         echo "<script> error_msg.innerHTML='Email not found'; error_box.style.visibility='visible'; error_box.style.position='relative';</script>";
+//     }
+//     else
+//     {
+//         $to=$email;
+//         $subject="OTP";
+//         $otp=rand(100000,999999);
+//         $_SESSION['otp']=$otp;
+//         $message="Your OTP is ".$otp;
+//         $headers="From: debrisexplore@gmail.com";
+//         mail($to,$subject,$message,$headers);
+//       //  echo "<script> window.location.href='otp.php';</script>";
+//     }
+// }
 
 
 
 ?>
-
+ -->

@@ -44,12 +44,12 @@
             </span>
           </button>
         </a>
-      <a href="inbox.php" style="text-decoration: none;">
+      <a href="save.php" style="text-decoration: none;">
   <button class="button">
     &nbsp;<i class="fa fa-inbox" style="font-size: 21px"></i>
     
-    &nbsp;<span class="htext">Inbox </span>
-      <span class="msg-count">9</span>
+    &nbsp;<span class="htext">Saved </span>
+      <!-- <span class="msg-count">9</span> -->
    
     
   </button>
