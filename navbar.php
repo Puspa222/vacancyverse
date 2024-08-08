@@ -7,7 +7,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="uploads/logo.jpg" type="image/x-icon">
     <title>Vacancy-Verse</title>
     
     <link rel="stylesheet" href="navbar.css" />

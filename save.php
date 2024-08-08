@@ -56,6 +56,10 @@ include "navbar.php";
 
 include "connectdb.php";
 session_start();
+
+if(!isset($_SESSION['session_id'])){
+    echo "<script> window.location.href='login.php';</script>";
+}
 $session_id=$_SESSION['session_id'];
 $sql="select * from savedposts where session_id='$session_id'";
 $result1=mysqli_query($conn,$sql);

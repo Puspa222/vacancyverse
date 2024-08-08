@@ -50,6 +50,7 @@
 
 include "connectdb.php";
 
+$session_id=$_SESSION['session_id'];
 
 $get="SELECT * FROM post ORDER BY time DESC";
 $result=mysqli_query($conn,$get);
@@ -58,7 +59,14 @@ if(mysqli_num_rows($result)>0){
   
         $title=$row['title'];
         $pid=$row['post_id'];
-        
+        $check="SELECT * FROM savedposts WHERE post_id='$pid' AND session_id='$session_id'";
+        $result1=mysqli_query($conn,$check);
+        if(mysqli_num_rows($result1)>0){
+          $checked="white";
+        }
+        else{
+          $checked="#dddddd00";
+        }
         echo "<div class='cardbox'>  <div class='header'> <div class='full'> <h2 class='title'>Job: $title</h2> <div class='itemofpost'>";
         echo '<div class="savepost"><label for="checkboxInput" class="bookmark" onclick="savepost('.$pid.')">
         <input type="checkbox" class="checkboxInput"  id="c'.$pid.'" />
@@ -69,7 +77,7 @@ if(mysqli_num_rows($result)>0){
           xmlns="http://www.w3.org/2000/svg"
           class="svgIcon"
         >
-          <path id="p'.$pid.'" 
+          <path id="p'.$pid.'" style="fill:'.$checked.';"
             d="M46 62.0085L46 3.88139L3.99609 3.88139L3.99609 62.0085L24.5 45.5L46 62.0085Z"
             stroke="black"
             stroke-width="7"
@@ -120,6 +128,7 @@ if(mysqli_num_rows($result)>0){
 }
 
 ?>
+
             </div>
             </div>   
 

@@ -14,7 +14,7 @@ session_start();
 </div>
 
 <div class="body">
-<img id="loginlogo" src="login2.jpg" alt="">
+<img id="loginlogo" src="uploads/login2.jpg" alt="">
     <div class="card2">
         <form class="form" method="POST">
             <p id="heading">Vacancy-Verse Login</p>
